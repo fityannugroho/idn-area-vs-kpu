@@ -2,9 +2,22 @@
   "name": "idn-area-vs-kpu",
   "module": "src/index.ts",
   "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun run --watch src/index.ts",
+    "db:migrate": "bun src/db/migrate.ts",
+    "db:generate": "drizzle-kit generate:pg",
+    "db:pull": "drizzle-kit introspect:pg",
+    "db:push": "drizzle-kit push:pg",
+    "db:rollback": "drizzle-kit drop",
+    "db:check": "drizzle-kit check:pg",
+    "db:studio": "drizzle-kit studio"
+  },
   "devDependencies": {
     "@types/bun": "latest",
-    "drizzle-kit": "^0.20.14"
+    "@types/papaparse": "^5.3.14",
+    "drizzle-kit": "^0.20.14",
+    "prettier": "^3.2.5"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -12,6 +25,8 @@
   "dependencies": {
     "drizzle-orm": "^0.29.3",
     "idn-area-data": "^3.1.0",
+    "jest-diff": "^29.7.0",
+    "papaparse": "^5.4.1",
     "postgres": "^3.4.3"
   }
 }
