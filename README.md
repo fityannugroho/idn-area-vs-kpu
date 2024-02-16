@@ -1,6 +1,6 @@
 # idn-area-vs-kpu
 
-Comparing the Indonesia area data from [idn-area](https://github.com/fityannugroho/idn-area-data) and **KPU** scraped using [zakiego/panta-pemilu-2024](https://github.com/zakiego/panta-pemilu-2024)
+Comparing the Indonesia area data from [idn-area](https://github.com/fityannugroho/idn-area-data) and **KPU** scraped using [zakiego/pantau-pemilu-2024][1]
 
 ## Prerequisite
 
@@ -11,7 +11,10 @@ Comparing the Indonesia area data from [idn-area](https://github.com/fityannugro
 
 - Scrape the KPU data
 
-  You need to clone the scraper [(zakiego/panta-pemilu-2024)](https://github.com/zakiego/panta-pemilu-2024), set the `DATABASE_URL` in `.env` file to your PostgreSQL database, and follow the guide to run the scraper.
+  You need to clone the scraper [(zakiego/pantau-pemilu-2024)][1], set the `DATABASE_URL` in `.env` file to your local PostgreSQL database, and follow the guide to run the scraper.
+
+  > [!NOTE]
+  > @zakiego have provided the **hosted PostgreSQL database URL containing the scraped data**, so you can use it instead of scraping the data yourself in your local machine. See https://data-pemilu.vercel.app for more information.
 
 - Clone this repository
 
@@ -19,7 +22,7 @@ Comparing the Indonesia area data from [idn-area](https://github.com/fityannugro
 
 - Set the environment variables
 
-  Copy the `.env.example` file, rename it to `.env`. Set the `DB_URL` with the same url you used for `DATABASE_URL` in [zakiego/panta-pemilu-2024](https://github.com/zakiego/panta-pemilu-2024).
+  Copy the `.env.example` file, rename it to `.env`. Set the **`DB_URL`** with the PostgreSQL database URL containing the scraped data.
 
 - Install the dependencies
 
@@ -100,3 +103,5 @@ This is an example of a **districts** data comparison result:
   527106,SANDUBAYA
   527201,RASANAE BARAT
 ```
+
+[1]: https://github.com/zakiego/pantau-pemilu-2024
