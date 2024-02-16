@@ -13,8 +13,6 @@ Comparing the Indonesia area data from [idn-area](https://github.com/fityannugro
 
   You need to clone the scraper [(zakiego/pantau-pemilu-2024)][1], set the `DATABASE_URL` in `.env` file to your local PostgreSQL database, and follow the guide to run the scraper.
 
-  > [!NOTE]
-  >
   > @zakiego have provided the **hosted PostgreSQL database URL containing the scraped data**, so you can use it instead of scraping the data yourself in your local machine.
   >
   > See https://data-pemilu.vercel.app for more information.
